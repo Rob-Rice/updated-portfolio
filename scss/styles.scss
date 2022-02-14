@@ -1,0 +1,79 @@
+@import 'variables';
+
+
+* {
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+[class*="col"] {
+    padding: 1rem;
+    color: #000;
+}
+
+.one {
+    border: fuchsia 2px solid;
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+    border: green 2px solid;
+
+    .name {
+        font-family: $poppins;
+    }
+
+    .what-it-do {
+        font-family: $raleway;
+    }
+
+    .orange {
+        position: absolute;
+        background-color: $mango;
+        height: 90vh;
+        width: 70vw;
+        z-index: -10;
+    }
+
+    .main-para {
+        border: #222 2px solid;
+    }
+
+    .yo {
+        // height: auto;
+        // margin-top: auto;
+        // border: #000 solid 2px;
+        // display: flex;
+        // align-content: flex-end;
+        // margin-bottom: 0;
+        // align-items: flex-end;
+        position: relative;
+        // margin-top: 100%;
+        // float: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: end;
+
+
+        .icon-p {
+            // align-items: flex-end;
+        }
+    
+        p{
+            font-size: .8rem;
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+
