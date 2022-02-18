@@ -1,5 +1,6 @@
 // ----------------------------- imports ----------------------------- 
 @import 'variables';
+@import 'keyframes';
 
 // ----------------------------- global ----------------------------- 
 * {
@@ -113,7 +114,7 @@ html {
 // ----------------------------- about part ----------------------------- 
 .about {
     opacity: 0;
-    animation: fadeInUp .3s ease-in-out 0s forwards;
+    animation: fadeInUp .2s ease-in-out 0s forwards;
     // animation:lightson .5s ease 2 forwards;
     position: relative;
     visibility: visible;
@@ -121,8 +122,8 @@ html {
     justify-content: center;
     align-content: center;
     // width: 60vw;
-    margin: 45% 0 0 0;
-    height: 250vh;
+    margin: -20% 0 0 0;
+    // height: 250vh;
 
     .about-me {
         opacity: 0;
@@ -248,18 +249,66 @@ html {
 }
 
 .projects {
-    opacity: 0;
-    animation: fadeInUp .3s ease-in-out 0s forwards;
+    // opacity: 0;
+    // animation: fadeInUp .3s ease-in-out 0s forwards;
     position: relative;
     visibility: visible;
     display: grid;
     justify-content: center;
     align-content: center;
-    margin: -14% 0 -50% 0;
+    margin: -20% 0 0 0;
 
     .portfolio {
-        opacity: 0;
-        animation: fadeInUp .6s ease-in-out 0s forwards;
+        // opacity: 0;
+        // animation: fadeInUp .3s ease-in-out 0s forwards;
+        // animation: fadeInUp .6s ease-in-out 0s forwards;
+        display: grid;
+        justify-content: center;
+        grid-template-rows: repeat(1, 100px);
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 3em;
+        // margin: -10% 0 0 0;
+
+
+
+
+        h4 {
+            opacity: 0;
+            animation: fadeInUp .3s ease-in-out 0s forwards;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 2rem;
+            text-decoration: underline $pistachio;
+        }
+
+        .card {
+            opacity: 0;
+            animation: fadeInUp .5s ease-in-out 0s forwards;
+            // animation: fadeInUp .6s ease-in-out 0s forwards;
+            // margin: -40% 0 0 0;
+        }
+
+
+    }
+}
+
+// ----------------------------- contact part ----------------------------- 
+.contact-hidden {
+    display: none;
+}
+
+.contact {
+    position: relative;
+    visibility: visible;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: -20% 0 0 0;
+
+    .contact-info {
+        // opacity: 0;
+        // animation: fadeInUp .3s ease-in-out 0s forwards;
+        // animation: fadeInUp .6s ease-in-out 0s forwards;
         display: grid;
         justify-content: center;
         grid-template-rows: repeat(1, 100px);
@@ -268,13 +317,13 @@ html {
 
 
         h4 {
+            opacity: 0;
+            animation: fadeInUp .3s ease-in-out 0s forwards;
             text-align: center;
             white-space: nowrap;
             font-size: 2rem;
             text-decoration: underline $pistachio;
         }
-
-
     }
 }
 
@@ -290,30 +339,9 @@ html {
     display: grid;
 }
 
-// ----------------------------- contact part ----------------------------- 
-.contact-hidden {
-    display: none;
+// ----------------------------- back to top btn ----------------------------- 
+.top {
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
-
-.contact {
-    animation:lightson .5s ease 2 forwards;
-    position: relative;
-    visibility: visible;
-    display: grid;
-}
-
-
-@keyframes fadeInUp {
-    from { 
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-

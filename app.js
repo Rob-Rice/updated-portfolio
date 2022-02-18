@@ -23,9 +23,9 @@ function appearAbout (e) {
         hiddenContact.classList.remove('contact')
         hiddenPort.classList.remove('projects')
         hiddenResume.classList.remove('resume')
-        setTimeout(() => {
+        // setTimeout(() => {
             hiddenAboutMe.classList.add('about')
-        }, 100)
+        // }, 100)
     } 
 }
 
