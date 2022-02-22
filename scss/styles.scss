@@ -18,8 +18,76 @@ html {
     color: #000;
 }
 
-// ----------------------------- tabs ----------------------------- 
+// ----------------------------- title before section ----------------------------- 
+.title {
+    font-size: 1.2rem;
+    margin-top: 10%;
+    font-family: $raleway;
+    text-decoration: underline $minion-yellow 4px;
+}
 
+// ----------------------------- back to top ----------------------------- 
+.top {
+    margin: 10% auto;
+    width: 30%;
+    white-space: nowrap;
+    padding: 15px 100px;
+    font-family: $raleway;
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+
+
+    a {
+        text-decoration: none;
+        color: $more-lightish-gray;
+
+        &:hover {
+        color: $even-more-lightish-gray;
+        }
+    }
+
+      .btt::before {
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        background: $even-more-lightish-gray;
+        display: block;
+        color: $more-lightish-gray;
+        -webkit-transform-origin: right top;
+        -ms-transform-origin: right top;
+        transform-origin: right top;
+        -webkit-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        transform: scale(0, 1);
+        -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+        transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+    }
+      
+      .btt:hover::before {
+        -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+        transform-origin: left top;
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+        color: $even-more-lightish-gray;
+
+    }
+}
+
+.footy {
+
+    font-family: $prata;
+    letter-spacing: .2rem;
+}
 
 // ----------------------------- main ----------------------------- 
 .main {
@@ -28,7 +96,8 @@ html {
     .name {
         margin: 5% 0 0 0 ;
         font-family: $poppins;
-        font-weight: 500;
+        font-weight: 600;
+        color: $dark-lava;
     }
 
     .what-it-do {
@@ -38,9 +107,9 @@ html {
 
     .orange {
         position: absolute;
-        background-color: $mango;
+        background-color: $shallow-blue;
         height: 90vh;
-        width: 80vw;
+        width: 100vw;
     }
 
     .main-para {
@@ -109,8 +178,6 @@ html {
     display: none;
 }
 
-
-
 // ----------------------------- about part ----------------------------- 
 .about {
     opacity: 0;
@@ -132,10 +199,12 @@ html {
         position: relative;
 
         h4 {
+            // color: $lightish-gray;
+            color: $dark-gray;
             text-align: center;
             white-space: nowrap;
             font-size: 2rem;
-            text-decoration: underline $pistachio;
+            // text-decoration: underline $minion-yellow;
         }
     }
 
@@ -144,12 +213,15 @@ html {
         display: grid;
         justify-content: center;
         align-items: center;
+        grid-template-rows: repeat(4, 150px);
         grid-template-columns: repeat(1, 1fr);
+        margin: 15% 0 0 0;
 
         .one-card {
             opacity: 0;
             animation: fadeInUp .7s ease-in-out 0s forwards;
             display: flex;
+            margin: 5% 0 0 0;
             width: 80vw;
             height: 150px;
             justify-content: center;
@@ -157,14 +229,21 @@ html {
             align-self: center;
             
             .card-img {
-                height: 150px;
-                width: 250px;
-                display: flex;
-                align-items: center;
-                align-self: center;
+                // height: 150px;
+                // width: 250px;
+                // display: flex;
+                // align-items: center;
+                // align-self: center;
+            }
+
+            img {
+                object-fit: contain;
+                height: 100px;
+                width: 100px;
             }
 
             .card-body {
+
                 h3 {
                     font-size: 1rem;
                     display: flex;
@@ -174,7 +253,6 @@ html {
                 p {
                     font-size: .8rem;
                 }
-
             }
         }
     }
@@ -187,9 +265,15 @@ html {
         .flow-cards{
             margin: 5% 0 0 0;
             display: grid;
-            grid-template-rows: repeat(2, 150px);
+            grid-template-rows: repeat(3, 150px);
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: .8rem;
+
+            img {
+                object-fit: cover;
+                height: 100px;
+                width: 100px;
+            }
         }
     }
 
@@ -201,10 +285,24 @@ html {
         .skills-cards {
             margin: 5% 0 0 0;
             display: grid;
-            grid-template-rows: repeat(2, 200px);
+            grid-template-rows: repeat(4, 200px);
             grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: .8rem;
+            grid-column-gap: 4rem;
 
+            .one-skill {
+                margin: 5% auto;
+
+                
+                img{
+                    height: 70px;
+                    width: 70px;
+                    object-fit: fill;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+
+                }
+            }
         }
     }
 
@@ -224,23 +322,31 @@ html {
                 margin: 0 auto;
 
                 img {
-                    margin: 0 auto 0 20%;
+                    object-fit: contain;
+                    height: 100px;
+                    width: 100px;
+                    margin: 0 auto;
                 }
                 p {
                     display: grid;
-                    justify-content: center;
-                    font-size: .8rem;
+                    // justify-content: center;
+                    font-size: .7rem;
                 }
             }
         }
     }
 
 // ----------------------------- back to top btn ----------------------------- 
-    .top {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
+    // .top {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-self: center;
+    //     cursor: pointer;
+    //     color: $more-lightish-gray;
+    //     font-size: 1.2rem;
+    //     letter-spacing: .2rem;
+    //     text-decoration: underline;
+    // }
 }
 
 // ----------------------------- portfolio part ----------------------------- 
@@ -278,10 +384,10 @@ html {
             text-align: center;
             white-space: nowrap;
             font-size: 2rem;
-            text-decoration: underline $pistachio;
         }
 
         .card {
+            margin: 0 auto;
             opacity: 0;
             animation: fadeInUp .5s ease-in-out 0s forwards;
             // animation: fadeInUp .6s ease-in-out 0s forwards;
@@ -303,17 +409,16 @@ html {
     display: grid;
     justify-content: center;
     align-content: center;
+    color: $dark-gray;
     margin: -20% 0 0 0;
 
     .contact-info {
-        // opacity: 0;
-        // animation: fadeInUp .3s ease-in-out 0s forwards;
-        // animation: fadeInUp .6s ease-in-out 0s forwards;
         display: grid;
         justify-content: center;
         grid-template-rows: repeat(1, 100px);
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 5em;
+
 
 
         h4 {
@@ -322,7 +427,91 @@ html {
             text-align: center;
             white-space: nowrap;
             font-size: 2rem;
-            text-decoration: underline $pistachio;
+            // text-decoration: underline $pistachio;
+        }
+
+        a {
+            text-decoration: none;
+            color: $dark-gray;
+        }
+
+        p {
+            font-family: 'Archivo', sans-serif;
+            letter-spacing: .3rem;
+        }
+
+        .link {
+            color: $air;
+            text-decoration: underline $dark-gray;
+        }
+
+        .my-info{
+            opacity: 0;
+            animation: fadeInUp .5s ease-in-out 0s forwards;
+            display: grid;
+            justify-content: center;
+            margin: -25% 0 0 0;
+
+            .state {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    form {
+        flex-direction: column;
+        // display: flex;
+        // justify-content: center;
+        margin: 0 auto;
+
+        input {
+        width: 80vw;
+        height: 40px;
+        font-size: 16px;
+        transition: 0.6s;
+        border: none;
+        border-bottom: 1px solid #CCC;
+        background-color: transparent;
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid #28a2a2;
+            }
+        }
+
+        button {
+            // margin-bottom: 10%;
+            // width: 40%;
+            // display: grid;
+            // justify-content: center;
+            // align-self: center;
+            border: none;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            // border: 0px;
+            background: transparent;
+            position: relative;
+            margin: 20px;
+            transition: all .25s ease;
+            &:hover::after {
+                transform: translate(-5px, -5px);
+            }
+            &:hover::before {
+                transform: translate(5px, 5px);
+            }
+            &::after,&::before {
+                border: 3px solid #000;
+                content: '';
+                position: absolute;
+                border-radius: inherit;
+                width: calc(100% - 6px);
+                height: calc(100% - 6px);
+                left: 0px;
+                bottom: 0px;
+                z-index: -1;
+                transition: all .25s ease;
+            }
+            
         }
     }
 }
@@ -340,8 +529,8 @@ html {
 }
 
 // ----------------------------- back to top btn ----------------------------- 
-.top {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
+// .top {
+//     display: flex;
+//     justify-content: center;
+//     align-self: center;
+// }

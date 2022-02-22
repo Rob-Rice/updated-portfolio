@@ -1,3 +1,11 @@
+// ===================== date at footer =====================   
+const dates = document.querySelectorAll('.date')
+
+dates.forEach(date => {
+    date.innerHTML = new Date().getFullYear()
+})
+
+// ===================== buttons for tabs ===================== 
 const aboutMe = document.querySelector('.first-btn')
 const portfolio = document.querySelector('.second-btn')
 const resume = document.querySelector('.third-btn')
@@ -13,7 +21,7 @@ const hiddenContact = document.querySelector('.contact-hidden')
 const aboutPage = document.querySelector('.about')
 
 aboutMe.addEventListener('click', appearAbout)
-
+// about tab
 function appearAbout (e) {
     e.preventDefault()
     const btn = e.currentTarget;
@@ -31,7 +39,7 @@ function appearAbout (e) {
 
 
 portfolio.addEventListener('click', appearPort)
-
+// portfolio tab
 function appearPort(event) {
     event.preventDefault()
     const portfolioBtn = event.currentTarget
@@ -48,7 +56,7 @@ function appearPort(event) {
 }
 
 resume.addEventListener('click', appearResume)
-
+// resume tab
 function appearResume(ev) {
     ev.preventDefault()
     const resumeBtn = ev.currentTarget
@@ -65,7 +73,7 @@ function appearResume(ev) {
 }
 
 contact.addEventListener('click', appearContact)
-
+// contact tab
 function appearContact(even) {
     even.preventDefault()
     const contactBtn = even.currentTarget
