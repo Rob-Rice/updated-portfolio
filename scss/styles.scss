@@ -13,6 +13,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 // ----------------------------- bootstrap ----------------------------- 
 [class*="col"] {
     color: #000;
@@ -24,6 +26,16 @@ html {
     margin-top: 10%;
     font-family: $raleway;
     text-decoration: underline $minion-yellow 4px;
+}
+
+// ----------------------------- page transition ----------------------------- 
+.page-transition {
+    position: absolute;
+    top: 0;
+    background-color: #28a2a2;
+    width: 100%;
+    height: 0%;
+    z-index: 900;
 }
 
 // ----------------------------- back to top ----------------------------- 
@@ -93,6 +105,7 @@ html {
 // ----------------------------- main ----------------------------- 
 .main {
     height: 60vh;
+    z-index: 10;
 
 
     .name {
@@ -100,10 +113,31 @@ html {
         font-family: $poppins;
         font-weight: 600;
         color: $dark-lava;
+        line-height: 4rem;
+
+
         @media(min-width: 824px) {
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 800;
             width: 10%;
+            margin: 30% 0 0 0;
+        }
+        @media(min-width: 940px) {
+            font-size: 5rem;
+        }
+        // @media(min-width: 1178px) {
+        //     font-size: 5rem;
+        //     margin: 20% 0 0 0;
+        //     line-height: 6rem;
+        // }
+        @media(min-width: 1178px) {
+            font-size: 7rem;
+            margin: 20% 0 0 0;
+            line-height:6rem;
+        }
+        @media(min-width: 1563px) {
+            font-size: 12rem;
+            line-height: 10rem;
         }
     }
 
@@ -117,8 +151,19 @@ html {
         }
         @media(min-width: 824px) {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: $dark-lava;
+
+        }
+        @media(min-width: 940px) {
+            font-size: 1.2rem;
+        }
+        @media(min-width: 1178px) {
+            font-size: 1.6rem;
+            letter-spacing: .1rem;
+        }
+        @media(min-width: 1563px) {
+            font-size: 1.8rem;
         }
     }
 
@@ -129,6 +174,9 @@ html {
         width: 100vw;
         @media(min-width: 824px) {
             background-color: #fff;
+            width: 80vw;
+            left: 50%;
+            margin: 0 0 0 -40%;
         }
 
     }
@@ -142,9 +190,62 @@ html {
         @media(min-width: 824px) {
             margin: 0;
             color: $dark-lava;
+            font-size: 1.2rem;
+            width: 35vw;
+            // margin: 0 0 0 10%;
+   
+        }
+        @media(min-width: 940px) {
+            font-size: 1.4rem;
+        }
+        @media(min-width: 1178px) {
+            font-size: 1.8rem;
+        }
+        @media(min-width: 1581px) {
+            font-size: 2rem;
+            width: 27vw;
         }
     }
+
+        .img {
+            background-color: $shallow-blue;
+            margin: -60% 0 0 64%;
+            height: 300px;
+            width: 250px;
+            @media(max-width: 823px) {
+                display: none;
+            }
+            @media(min-width: 968px) {
+                margin: -50% 0 0 64%;
+            }
+            @media(min-width: 1053px) {
+                margin: -40% 0 0 64%;
+            }
+            @media(min-width: 1225px) {
+                margin: -30% 0 0 64%;
+            }
+        }
+    // }
+
+        
     .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+        flex-direction: row;
+        position: relative;
+        margin-top: 25vw;
+
+        
+        a {
+            text-decoration: none;
+        }
+        @media(max-width: 823px) {
+            display: none;
+        }
+        @media(min-width: 1053px) {
+            margin-top: 15vh;
+        }
         button {
             border: none;
             background-color: #fff;
@@ -163,34 +264,12 @@ html {
                 color: #fff;
                 cursor: pointer;
             }
+
         }
-
-        //     a {
-        //         text-decoration: none;
-        //         border: none;
-        //         font-family: 'Archivo', sans-serif;
-        //         transition: ease-in .3s;
-
-
-        //         p {
-        //             font-family: 'Archivo', sans-serif;
-        //             border: none;
-        //             font-size: 1.2rem;
-        //             @media (max-width: 1141px) {
-        //                 margin: 0 0 .5% 0;
-        //             }
-
-        //             &:hover{
-        //                 background-color: $dark-gray;
-        //                 color: $light-blue;
-        //                 cursor: pointer;
-        //             }
-        //         }
-        //     }
-
-
-        
     }
+    //         }
+    //     }
+    // }
 
 // ----------------------------- icons ----------------------------- 
     .icons {
@@ -254,6 +333,7 @@ html {
 
 }
 
+// ----------------------------- hidden ----------------------------- 
 .hidden {
     display: none;
 }
@@ -275,7 +355,6 @@ html {
     .about-me {
         opacity: 0;
         animation: fadeInUp .5s ease-in-out 0s forwards;
-        // border: #000 2px solid;
         position: relative;
         @media (min-width: 636px) {
             margin-top: 20%;
@@ -398,6 +477,7 @@ html {
                     justify-content: center;
                     align-self: center;
 
+
                 }
             }
         }
@@ -432,18 +512,6 @@ html {
             }
         }
     }
-
-// ----------------------------- back to top btn ----------------------------- 
-    // .top {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-self: center;
-    //     cursor: pointer;
-    //     color: $more-lightish-gray;
-    //     font-size: 1.2rem;
-    //     letter-spacing: .2rem;
-    //     text-decoration: underline;
-    // }
 }
 
 // ----------------------------- portfolio part ----------------------------- 
@@ -471,7 +539,6 @@ html {
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 3em;
         // margin: -10% 0 0 0;
-        border: #000 2px solid;
         @media (min-width: 636px) {
             margin-top: 20%;
         }
@@ -530,7 +597,6 @@ html {
     align-content: center;
     color: $dark-gray;
     margin: -20% 0 0 0;
-    border: #000 2px solid;
     @media (min-width: 636px) {
         margin-top: -10%;
     }
@@ -616,7 +682,6 @@ html {
             padding: 20px 50px;
             font-size: 1.5rem;
             cursor: pointer;
-            // border: 0px;
             background: transparent;
             position: relative;
             margin: 20px;

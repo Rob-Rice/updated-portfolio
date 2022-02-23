@@ -31,15 +31,13 @@ function appearAbout (e) {
     if (btn) {
         orange.classList.add('change-size')
         smaller.classList.add('change-font')
-        // closeBtn.classList.add('close')
-        // home()
         hiddenContact.classList.remove('contact')
         hiddenPort.classList.remove('projects')
         hiddenResume.classList.remove('resume')
-        // setTimeout(() => {
-        hiddenAboutMe.classList.add('about')
-        hiddenHome.style.visibility = 'visible'
-        // }, 100)
+        setTimeout(() => {
+            hiddenAboutMe.classList.add('about')
+            hiddenHome.style.visibility = 'visible'
+        }, 100)
     } 
 }
 
@@ -55,8 +53,12 @@ function appearPort(event) {
         hiddenContact.classList.remove('contact')
         hiddenAboutMe.classList.remove('about')
         hiddenResume.classList.remove('resume')
+        setTimeout(() => {
+
         hiddenPort.classList.add('projects')
         hiddenHome.style.visibility = 'visible'
+    }, 100)
+
     } 
 }
 
@@ -74,7 +76,7 @@ function appearResume(ev) {
         setTimeout(() => {
             hiddenResume.classList.add('resume')
 
-        }, 300)
+        }, 100)
     }
 }
 
@@ -97,3 +99,80 @@ function appearContact(even) {
     }
 }
 
+
+// ===================== gsap ===================== 
+pageTransition = () => {
+    const width =  window.innerWidth
+    if(width < 824) {
+        return undefined
+    } 
+
+
+    var timeline = gsap.timeline()
+    timeline.to('main', {
+        zIndex: 900
+    })
+
+    timeline.to('.page-transition', {
+        duration: 1,
+        height: '100%',
+        top: '0%'
+    })
+
+    timeline.to('.page-transition', {
+        duration: .8,
+        height: '100%',
+        top: '100%',
+        delay: .3
+    })
+
+    timeline.set('.page-transition', {
+        top: '-100%'
+    })
+}
+
+mainAnimation = () => {
+
+    const width =  window.innerWidth
+    if(width < 824) {
+        return undefined
+    } 
+    var timeline = gsap.timeline()
+    // timeline.from('.container, .btn-container', {
+    timeline.from('.name, .what-it-do, .smaller, .img, .btn-container', {
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        stagger: {
+            amount: .4
+        },
+        delay: .8
+    })
+}
+
+delay = (n) => {
+    n = n || 2000
+    return new Promise((done) => {
+        setTimeout(() => {
+            done()
+        }, n)
+    })
+}
+
+// ===================== barba ===================== 
+barba.init({
+    sync: true,
+    transitions: [
+        {
+            async leave(data) {
+                const done = this.async()
+                pageTransition()
+                await delay(1000)
+                done()
+            },
+            async once(data) {
+                mainAnimation()
+            }
+        }
+    ]
+})
