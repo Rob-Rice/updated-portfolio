@@ -37,65 +37,85 @@
     <div class="main">
         <div class="orange">
             <div class="container">
-                    <div class="info">
-                        <div class="name">
-                            <p>
-                                Roberto Rice
-                            </p>    
-                        </div>
-                        <div class="what-it-do">
-                            <p>
-                                HTML EMAIL DEVELOPER
-                            </p>
-                            <p>
-                                FRONT END WEB DEVELOPER
-                            </p>
-                        </div>
-                        <div class="smaller">
-                            <p class="main-para">
-                            I'm an Email Developer, Front End Web Developer that is passionate
-                            about pulling his hair out to find ways to make the the internet a 
-                            more beautiful and functional space.
-                            </p>
-                        </div>
+                <div class="info">
+                    <div class="name">
+                        <p>
+                            Roberto Rice
+                        </p>    
                     </div>
+                    <div class="what-it-do">
+                        <p>
+                            HTML EMAIL DEVELOPER
+                        </p>
+                        <p>
+                            FRONT END WEB DEVELOPER
+                        </p>
+                    </div>
+                    <div class="smaller">
+                        <p class="main-para">
+                        Based out of Birmingham, Al. A developer that is passionate
+                        about pulling his hair out to find ways to make the the internet a 
+                        more beautiful and functional space.
+
+                    </div>
+                </p>
+                <!-- resume and about button -->
+                <div class="btn-container">
+                    <button class="pdf">
+                        resume.pdf
+                    </button>
+                    <button class="pdf">
+                        about
+                    </button>
+                </div>
+                </div>
             </div>
             <!-- begining of tabs -->
-            <div class="icons">
-                <ul>
-                    <li class="first-btn">
-                        <a  href=""> 
-                            <i class="fa-regular fa-face-smile fa-lg"></i>
-                            <p>
-                                about me
-                            </p>
-                        </a>
-                    </li>
-                    <li class="second-btn">
-                        <a href="">
-                            <i class="fa-solid fa-desktop fa-lg"></i>
-                            <p>
-                                portfolio
-                            </p>
-                        </a>
-                    </li>
-                    <li class="fourth-btn">
-                        <a href="">
-                            <i class="fa-regular fa-hand fa-lg"></i>
-                            <p>
-                                contact
-                            </p>
-                        </a>
-                    </li>
-                    <li class="third-btn">
-                        <a href="">
-                            <i class="fa-regular fa-file fa-lg"></i>
-                            <p>
-                                resume
-                            </p>
-                        </a>
-                    </li>
-                </ul>
+            <div class="container">
+                <div class="icons">
+                    <ul>
+                        <li class="first-btn">
+                            <a  href=""> 
+                                <i class="fa-regular fa-face-smile fa-lg"></i>
+                                <p>
+                                    about me
+                                </p>
+                            </a>
+                        </li>
+                        <li class="second-btn">
+                            <a href="">
+                                <i class="fa-solid fa-desktop fa-lg"></i>
+                                <p>
+                                    portfolio
+                                </p>
+                            </a>
+                        </li>
+                        <li class="fourth-btn">
+                            <a href="">
+                                <i class="fa-regular fa-hand fa-lg"></i>
+                                <p>
+                                    contact
+                                </p>
+                            </a>
+                        </li>
+                        <li class="third-btn">
+                            <a href="">
+                                <i class="fa-regular fa-file fa-lg"></i>
+                                <p>
+                                    resume
+                                </p>
+                            </a>
+                        </li>
+                        <li class="fifth-btn">
+                            <a href="">
+                                <i class="fa-solid fa-house-chimney fa-lg"></i>
+                                <p>
+                                    home
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- end of icons -->
         </div>
@@ -109,7 +129,7 @@
             <p class="title text-center">
                 what i do
             </p>
-        <div class="about-me-cards">
+        <div class="about-me-cards d-flex justify-content-center">
             <div class="one-card">
                 <div class="card-img">
                     <img src="img/email.png"/>
@@ -130,7 +150,9 @@
                     <h3>WEBSITES</h3>
                     <p>
                         Creating logical and easy to use responsive websites that are built with best 
-                        practices.                    
+                        practices.
+                        <!-- Keep the bigger picture in mind, while focusing on small details. I've 
+                        always had an eye for design. Obsessing over visually pleasing arts is my thing. -->
                     </p>
                 </div>
             </div>
@@ -294,17 +316,35 @@
         </footer>
     </article>
     <!-- end of about me -->
-    <!-- portfolio apart -->
+    <!-- portfolio part -->
     <article class="port-hidden">
         <div class="portfolio">
             <h4>portfolio</h4>
             <div class="card border-0" style="width: 18rem;">
                 <img src="https://picsum.photos/200/200?grayscale" class="d-flex justify-content-center" />
                 <div class="card-body">
-                  <p class="text-center title">Shawn Anthony Salon Spa</p>
-                  <p class="text-center">A landing page I built for a local business, the Shawn Anthony Salon & Spa. 
+                  <p class="text-center title">
+                      Shawn Anthony Salon Spa
+                    </p>
+                  <p class="text-center">
+                      A landing page I built for a local business, the Shawn Anthony Salon & Spa. 
                     Built with HTML, CSS, & JavaScript. 
-                </p>
+                    </p>
+                    <div class="portfolio-icons d-flex justify-content-center">
+                        <a class="d-flex justify-content-center" href="http://www.shawnanthonysalonspa.com" target="_blank">
+                            <i class="fa-solid fa-window-maximize fa-2x"></i>
+                            <p class="text-center">
+                                website
+                            </p>    
+                        </a>
+                        <a class="d-flex justify-content-center" href="https://github.com/Rob-Rice/Shawn_Anthony_Salon" target="_blank">
+                            <i class="fa-brands fa-github fa-2x"></i>    
+                            <p class="text-center">
+                                code
+                            </p>
+                        </a>
+
+                    </div>
                 </div>
             </div>
             <!-- <div class="card border-0" style="width: 18rem;">
@@ -372,7 +412,8 @@
             <form class="d-flex justify-content-center" action="https://formsubmit.co/robrice93@yahoo.com" method="POST">
                 <input type="text" placeholder="name" required>
                 <input type="text" placeholder="email / phone" required>
-                <input type="text" placeholder="message">
+                <!-- <input type="text"cols="20" rows="10" placeholder="message"> -->
+                <textarea type="text"cols="20" rows="4" placeholder="..."></textarea>
                 <br>
                 <!-- <button type="submit" class="d-flex">
                     SUBMIT

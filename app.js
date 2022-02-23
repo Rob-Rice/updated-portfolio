@@ -17,6 +17,9 @@ const hiddenAboutMe = document.querySelector('.hidden')
 const hiddenPort = document.querySelector('.port-hidden')
 const hiddenResume = document.querySelector('.resume-hidden')
 const hiddenContact = document.querySelector('.contact-hidden')
+const hiddenHome = document.querySelector('.fifth-btn')
+hiddenHome.style.visibility = 'hidden'
+// hiddenHome.style. = 'none'
 
 const aboutPage = document.querySelector('.about')
 
@@ -28,11 +31,14 @@ function appearAbout (e) {
     if (btn) {
         orange.classList.add('change-size')
         smaller.classList.add('change-font')
+        // closeBtn.classList.add('close')
+        // home()
         hiddenContact.classList.remove('contact')
         hiddenPort.classList.remove('projects')
         hiddenResume.classList.remove('resume')
         // setTimeout(() => {
-            hiddenAboutMe.classList.add('about')
+        hiddenAboutMe.classList.add('about')
+        hiddenHome.style.visibility = 'visible'
         // }, 100)
     } 
 }
@@ -49,9 +55,8 @@ function appearPort(event) {
         hiddenContact.classList.remove('contact')
         hiddenAboutMe.classList.remove('about')
         hiddenResume.classList.remove('resume')
-        setTimeout(() => {
-            hiddenPort.classList.add('projects')
-        }, 300)
+        hiddenPort.classList.add('projects')
+        hiddenHome.style.visibility = 'visible'
     } 
 }
 
@@ -68,6 +73,7 @@ function appearResume(ev) {
         hiddenPort.classList.remove('projects')
         setTimeout(() => {
             hiddenResume.classList.add('resume')
+
         }, 300)
     }
 }
@@ -85,6 +91,8 @@ function appearContact(even) {
         hiddenPort.classList.remove('projects')
         setTimeout(() => {
             hiddenContact.classList.add('contact')
+        hiddenHome.style.visibility = 'visible'
+
         }, 300)
     }
 }
