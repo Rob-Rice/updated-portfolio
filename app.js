@@ -19,7 +19,6 @@ const hiddenResume = document.querySelector('.resume-hidden')
 const hiddenContact = document.querySelector('.contact-hidden')
 const hiddenHome = document.querySelector('.fifth-btn')
 hiddenHome.style.visibility = 'hidden'
-// hiddenHome.style. = 'none'
 
 const aboutPage = document.querySelector('.about')
 
@@ -54,10 +53,9 @@ function appearPort(event) {
         hiddenAboutMe.classList.remove('about')
         hiddenResume.classList.remove('resume')
         setTimeout(() => {
-
-        hiddenPort.classList.add('projects')
-        hiddenHome.style.visibility = 'visible'
-    }, 100)
+            hiddenPort.classList.add('projects')
+            hiddenHome.style.visibility = 'visible'
+        }, 100)
 
     } 
 }
@@ -95,7 +93,7 @@ function appearContact(even) {
             hiddenContact.classList.add('contact')
         hiddenHome.style.visibility = 'visible'
 
-        }, 300)
+        }, 100)
     }
 }
 
@@ -107,28 +105,40 @@ pageTransition = () => {
         return undefined
     } 
 
-
     var timeline = gsap.timeline()
-    timeline.to('main', {
+    timeline.set('body', {
+        // top: '-100%'
+        visibility: 'hidden'
+    })
+
+    timeline.to('main, .btn-container', {
         zIndex: 900
     })
 
     timeline.to('.page-transition', {
-        duration: 1,
+        duration: .5,
         height: '100%',
         top: '0%'
     })
 
+
     timeline.to('.page-transition', {
-        duration: .8,
+        duration: .1,
         height: '100%',
         top: '100%',
-        delay: .3
+        // delay: .1
+    })
+    timeline.set('body', {
+        // top: '-100%'
+        visibility: 'hidden'
     })
 
     timeline.set('.page-transition', {
-        top: '-100%'
+        // top: '-100%'
+        opacity: '.1'
     })
+
+
 }
 
 mainAnimation = () => {
@@ -139,19 +149,20 @@ mainAnimation = () => {
     } 
     var timeline = gsap.timeline()
     // timeline.from('.container, .btn-container', {
-    timeline.from('.name, .what-it-do, .smaller, .img, .btn-container', {
+    // timeline.from('.name, .what-it-do, .smaller, .img, .btn-container', {
+    timeline.from('.main, .a-main', {
         duration: 1,
         y: 30,
         opacity: 0,
         stagger: {
             amount: .4
         },
-        delay: .8
+        delay: 1
     })
 }
 
 delay = (n) => {
-    n = n || 2000
+    n = n || 1000
     return new Promise((done) => {
         setTimeout(() => {
             done()
@@ -168,6 +179,9 @@ barba.init({
                 const done = this.async()
                 pageTransition()
                 await delay(1000)
+                // setTimeout(() => {
+                    location.reload()
+                // }, 800);
                 done()
             },
             async once(data) {
@@ -176,3 +190,4 @@ barba.init({
         }
     ]
 })
+
