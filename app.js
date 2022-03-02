@@ -107,7 +107,6 @@ pageTransition = () => {
 
     var timeline = gsap.timeline()
     timeline.set('body', {
-        // top: '-100%'
         visibility: 'hidden'
     })
 
@@ -115,11 +114,11 @@ pageTransition = () => {
         zIndex: 900
     })
 
-    timeline.to('.page-transition', {
-        duration: .5,
-        height: '100%',
-        top: '0%'
-    })
+    // timeline.to('.page-transition', {
+    //     duration: .5,
+    //     height: '100%',
+    //     top: '0%'
+    // })
 
 
     timeline.to('.page-transition', {

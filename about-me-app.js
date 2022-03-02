@@ -129,76 +129,76 @@ function appearContact(even) {
 
 
 // ===================== gsap ===================== 
-// pageTransition = () => {
-//     const width =  window.innerWidth
-//     if(width < 824) {
-//         return undefined
-//     } 
+pageTransition = () => {
+    const width =  window.innerWidth
+    if(width < 824) {
+        return undefined
+    } 
 
-//     var timeline = gsap.timeline()
-//     timeline.set('body', {
-//         // top: '-100%'
-//         visibility: 'hidden'
-//     })
+    var timeline = gsap.timeline()
+    timeline.set('body', {
+        // top: '-100%'
+        visibility: 'hidden'
+    })
 
-//     timeline.to('main, .btn-container', {
-//         zIndex: 900
-//     })
+    timeline.to('main, .btn-container', {
+        zIndex: 900
+    })
 
-//     timeline.to('.page-transition', {
-//         duration: .5,
-//         height: '100%',
-//         top: '0%'
-//     })
-
-
-//     timeline.to('.page-transition', {
-//         duration: .1,
-//         height: '100%',
-//         top: '100%',
-//         // delay: .1
-//     })
-//     timeline.set('body', {
-//         // top: '-100%'
-//         visibility: 'hidden'
-//     })
-
-//     timeline.set('.page-transition', {
-//         // top: '-100%'
-//         opacity: '.1'
-//     })
+    timeline.to('.page-transition', {
+        duration: .5,
+        height: '100%',
+        top: '0%'
+    })
 
 
-// }
+    timeline.to('.page-transition', {
+        duration: .1,
+        height: '100%',
+        top: '100%',
+        // delay: .1
+    })
+    timeline.set('body', {
+        // top: '-100%'
+        visibility: 'hidden'
+    })
 
-// mainAnimation = () => {
+    timeline.set('.page-transition', {
+        // top: '-100%'
+        opacity: '.1'
+    })
 
-//     const width =  window.innerWidth
-//     if(width < 824) {
-//         return undefined
-//     } 
-//     var timeline = gsap.timeline()
-//     // timeline.from('.container, .btn-container', {
-//     // timeline.from('.name, .what-it-do, .smaller, .img, .btn-container', {
-//     timeline.from('.main, .a-main', {
-//         duration: 1,
-//         y: 30,
-//         opacity: 0,
-//         stagger: {
-//             amount: .4
-//         },
-//         delay: 1
-//     })
-// }
 
-// delay = (n) => {
-//     n = n || 1000
-//     return new Promise((done) => {
-//         setTimeout(() => {
-//             done()
-//         }, n)
-//     })
-// }
+}
+
+mainAnimation = () => {
+
+    const width =  window.innerWidth
+    if(width < 824) {
+        return undefined
+    } 
+    var timeline = gsap.timeline()
+    // timeline.from('.container, .btn-container', {
+    // timeline.from('.name, .what-it-do, .smaller, .img, .btn-container', {
+    timeline.from('.main, .a-main', {
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        stagger: {
+            amount: .4
+        },
+        delay: 1
+    })
+}
+
+delay = (n) => {
+    n = n || 1000
+    return new Promise((done) => {
+        setTimeout(() => {
+            done()
+        }, n)
+    })
+}
 
 // ===================== barba ===================== 
 // barba.init({

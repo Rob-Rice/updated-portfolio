@@ -123,23 +123,6 @@ html {
             margin: 40% 0 0 0 ;
             opacity: 1;
         }
-        // @media(min-width: 940px) {
-        //     font-size: 5rem;
-        // }
-        // // @media(min-width: 1178px) {
-        // //     font-size: 5rem;
-        // //     margin: 20% 0 0 0;
-        // //     line-height: 6rem;
-        // // }
-        // @media(min-width: 1178px) {
-        //     font-size: 7rem;
-        //     margin: 20% 0 0 0;
-        //     line-height:6rem;
-        // }
-        // @media(min-width: 1563px) {
-        //     font-size: 12rem;
-        //     line-height: 10rem;
-        // }
     }
 
     .what-it-do {
@@ -172,12 +155,8 @@ html {
     }
 
     .orange {
-        // position: relative;
         position: absolute;
-        // background-image: url('/img/not-me.jpg');
         background-color: rgba(172, 236, 255, 0.25);
-
-        // background-color: $shallow-blue;
         height: 100vh;
         width: 100vw;
         &::before {
@@ -195,21 +174,12 @@ html {
         }
         @media(min-width: 824px) {
             position: relative;
-            // margin: 0 auto;
-            // z-index: -1;
-            // background-color: #fff;
             width: 60vw;
             height: 80vh;
-            // height: 120vh;
             bottom: 20%;
             left: 25%;
             margin: -25px 0 0 -25px;
-            // margin: 0 auto;
-            // margin: -20% 0 0 -40%;
                         
-            &::before {
-                // opacity: .0;
-            }
         }
         @media (min-width: 1120px) {
             width: 50vw;
@@ -237,63 +207,10 @@ html {
             width: 40vw;
         }
         @media(min-width: 824px) {
-            // margin: 0;
-            // color: $dark-lava;
-            // font-size: 1.2rem;
-            // width: 35vw;
             display: none;
         }
-        // @media(min-width: 940px) {
-        //     font-size: 1.4rem;
-        // }
-        // @media(min-width: 1178px) {
-        //     font-size: 1.8rem;
-        // }
-        // @media(min-width: 1581px) {
-        //     font-size: 2rem;
-        //     width: 27vw;
-        // }
     }
-
-        .img {
-            position: relative;
-            height: 500px;
-            width: 350px;
-            display: flex;
-            background-color: rgba(201, 230, 233, .45);
-            justify-self: center;
-            margin: 5% auto;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                bottom: 0px;
-                left: 0px;
-                // background-image: url("https://picsum.photos/350/400?grayscale");
-                // background-size: ;
-                background-color: rgba(201, 230, 233, .45);
-                object-fit: cover;
-                background-position: top center;
-                opacity: .65;
-            }
-        //     @media(max-width: 824px) {
-        //         display: none;
-        //     }
-            // }
-            // @media(min-width: 968px) {
-            //     margin: -50% 0 0 64%;
-            // }
-            // @media(min-width: 1053px) {
-            //     margin: -40% 0 0 64%;
-            // }
-            // @media(min-width: 1225px) {
-            //     margin: -40% 0 0 70%;
-            // }
-        }
-    // }
-
-        
+   
     .btn-container {
         display: flex;
         justify-content: center;
@@ -333,18 +250,12 @@ html {
 
         }
     }
-    //         }
-    //     }
-    // }
 
 // ----------------------------- icons ----------------------------- 
     .icons {
         position: absolute;
         bottom: 0px;
         z-index: 100;
-        @media(min-width: 824px) {
-            // display: none;
-        }
 
         ul {
             display: flex;
@@ -368,7 +279,6 @@ html {
 
                 i {
                     display: flex;
-                    // gap: -20px;
                     flex-direction: row;
                     justify-content: center;
                     margin: 0 0 15% 0;
@@ -389,34 +299,21 @@ html {
 
 // ----------------------------- change size  ----------------------------- 
     .change-size {
-        // margin: 0 0 0 10%;
         transition: .3s ease-in-out;
         width: 100vw;
         height: 45vh;
     }
 
     .change-size-larger {
-        // margin: 0 auto 0 auto;
         margin: 0 0 0 -10%;
-
         display: flex;
         justify-content: center;
         align-content: center;
         align-items: center;
         align-self: center;
-        
         transition: .3s ease-in-out;
         width: 70vw;
         height: 60vh;
-        // visibility: hidden;
-
-// -----------------------------------------------------
-        // position: relative;
-        // width: 60vw;
-        // height: 80vh;
-        // bottom: 20%;
-        // left: 25%;
-        // margin: 0 auto;
 
         @media (min-width: 1120px) {
             width: 50vw;
@@ -439,39 +336,21 @@ html {
 .about {
     opacity: 0;
     animation: fadeInUp .2s ease-in-out 0s forwards;
-    // animation:lightson .5s ease 2 forwards;
     position: relative;
     visibility: visible;
     display: grid;
     justify-content: center;
     align-content: center;
-    // width: 60vw;
     padding: -20% 0 0 0;
-    // height: 250vh;
     @media (min-width: 824px) {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // align-content: center;
-        // margin: -20% auto 0 auto;
-        // margin: -20% auto 0 auto;
         left: 15%;
-        // margin: -20% 0 0 ;
         margin: -11% 0 0 0;
         padding: 10% 0 0 0;
-
         width: 70vw;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
     @media (min-width: 1120px) {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // align-content: center;
-        // margin: -20% auto 0 auto;
-        // margin: -20% auto 0 auto;
         left: 25%;
-        // margin: -20% 0 0 ;
         margin: -11% 0 0 0;
         padding: 10% 0 0 0;
         width: 50vw;
@@ -482,22 +361,16 @@ html {
         opacity: 0;
         animation: fadeInUp .5s ease-in-out 0s forwards;
         position: relative;
-        @media (min-width: 636px) {
-            // margin-top: 20%;
-        }
 
         h4 {
-            // color: $lightish-gray;
             color: $dark-gray;
             text-align: center;
             white-space: nowrap;
             font-size: 2rem;
-            // text-decoration: underline $minion-yellow;
         }
     }
 
     .about-me-cards {
-        // animation:lightson .2s ease 2 forwards;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -518,16 +391,6 @@ html {
             align-self: center;
             @media(min-width: 650px) {
                 width: auto;
-            }
-
-
-            
-            .card-img {
-                // height: 150px;
-                // width: 250px;
-                // display: flex;
-                // align-items: center;
-                // align-self: center;
             }
 
             img {
@@ -647,7 +510,6 @@ html {
                 }
                 p {
                     display: grid;
-                    // justify-content: center;
                     font-size: .7rem;
                 }
             }
@@ -661,8 +523,6 @@ html {
 }
 
 .projects {
-    // opacity: 0;
-    // animation: fadeInUp .3s ease-in-out 0s forwards;
     position: relative;
     visibility: visible;
     display: grid;
@@ -670,29 +530,14 @@ html {
     align-content: center;
     margin: -20% 0 0 0;
     @media (min-width: 824px) {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // align-content: center;
-        // margin: -20% auto 0 auto;
-        // margin: -20% auto 0 auto;
         left: 15%;
-        // margin: -20% 0 0 ;
         margin: -11% 0 0 0;
         padding: 10% 0 0 0;
-
         width: 70vw;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
     @media (min-width: 1120px) {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // align-content: center;
-        // margin: -20% auto 0 auto;
-        // margin: -20% auto 0 auto;
         left: 25%;
-        // margin: -20% 0 0 ;
         margin: -11% 0 0 0;
         padding: 10% 0 0 0;
 
@@ -701,21 +546,14 @@ html {
     }
 
     .portfolio {
-        // opacity: 0;
-        // animation: fadeInUp .3s ease-in-out 0s forwards;
-        // animation: fadeInUp .6s ease-in-out 0s forwards;
         display: grid;
         justify-content: center;
         grid-template-rows: repeat(1, 100px);
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 3em;
-        // margin: -10% 0 0 0;
         @media (min-width: 636px) {
             margin-top: 20%;
         }
-
-
-
 
         h4 {
             opacity: 0;
@@ -729,8 +567,6 @@ html {
             margin: 0 auto;
             opacity: 0;
             animation: fadeInUp .5s ease-in-out 0s forwards;
-            // animation: fadeInUp .6s ease-in-out 0s forwards;
-            // margin: -40% 0 0 0;
 
             .portfolio-icons {
                 gap: 50px;
@@ -772,32 +608,15 @@ html {
         margin-top: -10%;
     }
     @media (min-width: 824px) {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // align-content: center;
-        // margin: -20% auto 0 auto;
-        // margin: -20% auto 0 auto;
         left: 15%;
-        // margin: -20% 0 0 ;
         margin: -11% 0 0 0;
         padding: 10% 0 0 0;
-
         width: 70vw;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
     @media (min-width: 1100px) {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // align-content: center;
-        // margin: -20% auto 0 auto;
-        // margin: -20% auto 0 auto;
         left: 25%;
-        // margin: -20% 0 0 ;
-        // margin: -11% 0 0 0;
         padding: 10% 0 0 0;
-
         width: 50vw;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
@@ -817,7 +636,6 @@ html {
             text-align: center;
             white-space: nowrap;
             font-size: 2rem;
-            // text-decoration: underline $pistachio;
         }
 
         a {
@@ -835,13 +653,7 @@ html {
             text-decoration: underline $dark-gray;
             display: flex;
             justify-content: center;
-
-     
-
-
         }
-
-
 
         .my-info{
             opacity: 0;
@@ -884,8 +696,6 @@ html {
 
     form {
         flex-direction: column;
-        // display: flex;
-        // justify-content: center;
         margin: 0 auto;
 
 
@@ -903,47 +713,18 @@ html {
                 border-bottom: 1px solid #28a2a2;
             }
             @media (min-width: 824px) {
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;
-                // align-content: center;
-                // margin: -20% auto 0 auto;
-                // margin: -20% auto 0 auto;
-                // left: 15%;
-                // // margin: -20% 0 0 ;
-                // margin: -11% 0 0 0;
-                // padding: 10% 0 0 0;
-        
                 width: 40vw;
-                // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
             }
         }
 
         textarea {
             height: 20%;
             @media (min-width: 824px) {
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;
-                // align-content: center;
-                // margin: -20% auto 0 auto;
-                // margin: -20% auto 0 auto;
-                // left: 15%;
-                // // margin: -20% 0 0 ;
-                // margin: -11% 0 0 0;
-                // padding: 10% 0 0 0;
-        
                 width: 40vw;
-                // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
             }
         }
 
         button {
-            // margin-bottom: 10%;
-            // width: 40%;
-            // display: grid;
-            // justify-content: center;
-            // align-self: center;
             border: none;
             padding: 20px 50px;
             font-size: 1.5rem;
