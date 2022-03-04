@@ -122,9 +122,9 @@ html {
         justify-content: center;
         align-items: center;
         align-content: center;
-        margin: 10% 0 0 0;
+        margin: 5% 0 0 0;
         overflow: hidden;
-        height: 70vh;
+        height: 80vh;
     }
 
 
@@ -132,7 +132,7 @@ html {
         margin: 5% 0 0 0 ;
         font-family: $poppins;
         font-weight: 600;
-        color: $dark-lava;
+        color: $more-lightish-gray;
         line-height: 4rem;
 
 
@@ -143,6 +143,7 @@ html {
             margin: 30% 0 0 0;
         }
         @media(min-width: 940px) {
+            margin: 30% 0 0 0;
             font-size: 5rem;
         }
 
@@ -169,7 +170,7 @@ html {
         @media(min-width: 824px) {
             margin: 0;
             font-size: 1rem;
-            color: $dark-lava;
+            color: $dark-gray;
         }
         @media(min-width: 940px) {
             font-size: 1.2rem;
@@ -213,6 +214,7 @@ html {
     }
 
     .main-para {
+        
         font-family: $poppins;
         font-weight: 500;
         @media (min-width: 768px) {
@@ -220,7 +222,7 @@ html {
         }
         @media(min-width: 824px) {
             margin: 0;
-            color: $dark-lava;
+            color: $lightish-gray;
             font-size: 1.2rem;
             width: 35vw;
             // margin: 0 0 0 10%;
@@ -269,11 +271,12 @@ html {
                 // height: 150px;
                 // width: 100px;
             }
+
             @media(min-width: 968px) {
                 margin: -50% 0 0 64%;
             }
             @media(min-width: 1178px) {
-                margin: -60vh 0 0 70%;
+                margin: -55vh 0 0 70%;
                 height: 450px;
                 width: 300px;
             }
@@ -291,10 +294,19 @@ html {
         
     .btn-container {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: row;
         position: relative;
         margin-top: 5vw;
+        @media(min-width: 1030px) {
+            // margin-top: 7vh;
+        }
+        @media(min-width: 1100px) {
+            margin-top: 12vh;
+        }
+        @media(min-width: 1156px) {
+            margin-top: 5vh;
+        }
 
         
         a {
@@ -303,15 +315,11 @@ html {
         @media(max-width: 823px) {
             display: none;
         }
-        @media(min-width: 1617px) {
-            // display: none;
-            margin-top: 3vh;
+        @media(min-width: 1156px) {
             margin-right: 2vw;
+            justify-content: flex-end;
         }
 
-        // @media(min-width: 1053px) {
-        //     // margin-top: 15vh;
-        // }
         button {
             border: none;
             background-color: #fff;
@@ -330,14 +338,8 @@ html {
                 color: #fff;
                 cursor: pointer;
             }
-            // @media(max-width: 824px) {
-            //     display: none;
-            // }
         }
     }
-    //         }
-    //     }
-    // }
 
 // ----------------------------- icons ----------------------------- 
     .icons {
