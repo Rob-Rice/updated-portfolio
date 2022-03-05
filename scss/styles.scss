@@ -196,7 +196,8 @@ html {
             right: 0px;
             bottom: 0px;
             left: 0px;
-            background-image: url('/img/not-me.jpg');
+            // background-image: url('/img/not-me.jpg');
+            background-image: url('/img/moi.png');
             background-size: cover;
             background-position: top center;
             opacity: .65;
@@ -245,7 +246,7 @@ html {
             height: 350px;
             width: 250px;
             display: flex;
-            background-color: rgba(201, 230, 233, .45);
+            // background-color: rgba(201, 230, 233, .45);
             justify-self: center;
             // margin: 5% auto;
             margin: -55% 0 0 60%;
@@ -277,7 +278,7 @@ html {
             }
             @media(min-width: 1178px) {
                 margin: -55vh 0 0 70%;
-                height: 450px;
+                // height: 450px;
                 width: 300px;
             }
 
@@ -322,20 +323,20 @@ html {
 
         button {
             border: none;
-            background-color: #fff;
+            // background-color: $shallow-;
             font-family: 'Archivo', sans-serif;
-            color: $dark-lava;
+            color: $dark-gray;
             width: 150px;
             height: 55px;
             letter-spacing: 2px;
             font-weight: 600;
             font-size: 1.2rem;
-            border: 2.5px solid $dark-lava; 
+            border: 2.5px solid $dark-gray; 
             transition: ease-in .3s;
             margin: 0 7.5%;
                 &:hover{
-                background-color: $dark-lava;
-                color: #fff;
+                background-color: $dark-gray;
+                color: white;
                 cursor: pointer;
             }
         }
@@ -478,7 +479,6 @@ html {
                 object-fit: contain;
                 height: 100px;
                 width: 100px;
-
             }
 
             .card-body {
