@@ -137,6 +137,7 @@ html {
 
 
         @media(min-width: 824px) {
+            color: $saphire;
             font-size: 4rem;
             font-weight: 800;
             width: 10%;
@@ -186,30 +187,35 @@ html {
 
     .orange {
         position: absolute;
-        background-color: $shallow-blue;
         height: 100vh;
         width: 100vw;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            // background-image: url('/img/not-me.jpg');
-            background-image: url('/img/moi.png');
-            background-size: cover;
-            background-position: top center;
-            opacity: .65;
-        }
+        background-image: url('/img/me-in-the-laptop.png');
+        background-repeat: no-repeat;
+        background-size: 250px;
+        background-position: center 80%;
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0px;
+        //     right: 0px;
+        //     bottom: 0px;
+        //     left: 0px;
+        //     background-image: url('/img/me-in-the-laptop.png');
+        //     background-size: cover;
+        //     background-position: top center;
+        //     opacity: .65;
+        // }
         @media(min-width: 824px) {
-            background-color: #fff;
-            width: 80vw;
-            left: 50%;
-            margin: 0 0 0 -40%;
-            &::before {
-                opacity: 0;
-            }
+            // background-color: #fff;
+            // // width: 80vw;
+            // left: 50%;
+            // margin: 0 0 0 -40%;
+            // &::before {
+            //     opacity: 0;
+            // }
+            // visibility: hidden;
+            background-size: 0px;
         }
 
     }
@@ -244,7 +250,7 @@ html {
         .img {
             position: relative;
             height: 350px;
-            width: 250px;
+            width: 300px;
             display: flex;
             // background-color: rgba(201, 230, 233, .45);
             justify-self: center;
@@ -298,10 +304,13 @@ html {
         justify-content: center;
         flex-direction: row;
         position: relative;
-        margin-top: 5vw;
-        @media(min-width: 1030px) {
-            // margin-top: 7vh;
+        margin-top: 10vw;
+        @media(min-width: 940px) {
+            margin-top: 2vh;
         }
+        // @media(min-width: 992px) {
+        //     margin-top: 2vh;
+        // }
         @media(min-width: 1100px) {
             margin-top: 12vh;
         }
@@ -315,6 +324,10 @@ html {
         }
         @media(max-width: 823px) {
             display: none;
+        }
+        @media(min-width: 992px) {
+            margin-right: 2vw;
+            justify-content: flex-end;
         }
         @media(min-width: 1156px) {
             margin-right: 2vw;
@@ -398,7 +411,11 @@ html {
     .change-size {
         transition: .3s ease-in-out;
         height: 40vh;
-        width: 100vw;
+        // width: 100vw;
+        background-color: $shallow-blue;
+        background-position: 100% -20%;
+        background-image: url('/img/moi.png');
+        background-size: 190px;
     }
 
     .change-font {
