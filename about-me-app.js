@@ -1,6 +1,10 @@
+// ===================== date at footer =====================   
+const dates = document.querySelectorAll('.date')
 
+dates.forEach(date => {
+    date.innerHTML = new Date().getFullYear()
+})
 
-// ===================== about me tabs ===================== 
 const aboutMe = document.querySelector('.first-btn')
 const portfolio = document.querySelector('.second-btn')
 const resume = document.querySelector('.third-btn')
@@ -16,7 +20,7 @@ const hiddenPort = document.querySelector('.port-hidden')
 const hiddenResume = document.querySelector('.resume-hidden')
 const hiddenContact = document.querySelector('.contact-hidden')
 const hiddenHome = document.querySelector('.fifth-btn')
-hiddenHome.style.visibility = 'hidden'
+// hiddenHome.style.visibility = 'hidden'
 
 
 
@@ -30,20 +34,26 @@ function appearAbout (e) {
         smaller.classList.add('change-font')
         hiddenContact.classList.remove('contact')
         hiddenPort.classList.remove('projects')
-        hiddenResume.classList.remove('resume')
+        // hiddenResume.classList.remove('resume')
         setTimeout(() => {
             hiddenAboutMe.classList.add('about')
-            hiddenHome.style.visibility = 'visible'
+            // hiddenHome.style.visibility = 'visible'
         }, 100)
     } else {
         orange.classList.add('change-size-larger')
         hiddenContact.classList.remove('contact')
         hiddenPort.classList.remove('projects')
-        hiddenResume.classList.remove('resume')
+        // hiddenResume.classList.remove('resume')
         setTimeout(() => {
             hiddenAboutMe.classList.add('about')
         }, 100)
     }
+}
+
+if (window.innerWidth > 824) {
+    orange.classList.add('change-size')
+    hiddenAboutMe.classList.add('about')
+
 }
 
 
@@ -65,37 +75,37 @@ function appearPort(event) {
         orange.classList.add('change-size-larger')
         hiddenContact.classList.remove('contact')
         hiddenAboutMe.classList.remove('about')
-        hiddenResume.classList.remove('resume')
+        // hiddenResume.classList.remove('resume')
         setTimeout(() => {
             hiddenPort.classList.add('projects')
         }, 100)
     }
 }
 
-resume.addEventListener('click', appearResume)
-// resume tab
-function appearResume(ev) {
-    ev.preventDefault()
-    if (window.innerWidth <= 824) {
-        orange.classList.add('change-size')
-        smaller.classList.add('change-font')
-        hiddenAboutMe.classList.remove('about')
-        hiddenContact.classList.remove('contact')
-        hiddenPort.classList.remove('projects')
-        setTimeout(() => {
-            hiddenResume.classList.add('resume')
-            hiddenHome.style.visibility = 'visible'
-        }, 100)
-    } else {
-        orange.classList.add('change-size-larger')
-        hiddenAboutMe.classList.remove('about')
-        hiddenContact.classList.remove('contact')
-        hiddenPort.classList.remove('projects')
-        setTimeout(() => {
-            hiddenResume.classList.add('resume')
-        }, 100)
-    }
-}
+// resume.addEventListener('click', appearResume)
+// // resume tab
+// function appearResume(ev) {
+//     ev.preventDefault()
+//     if (window.innerWidth <= 824) {
+//         orange.classList.add('change-size')
+//         smaller.classList.add('change-font')
+//         hiddenAboutMe.classList.remove('about')
+//         hiddenContact.classList.remove('contact')
+//         hiddenPort.classList.remove('projects')
+//         setTimeout(() => {
+//             hiddenResume.classList.add('resume')
+//             hiddenHome.style.visibility = 'visible'
+//         }, 100)
+//     } else {
+//         orange.classList.add('change-size-larger')
+//         hiddenAboutMe.classList.remove('about')
+//         hiddenContact.classList.remove('contact')
+//         hiddenPort.classList.remove('projects')
+//         setTimeout(() => {
+//             hiddenResume.classList.add('resume')
+//         }, 100)
+//     }
+// }
 
 contact.addEventListener('click', appearContact)
 // contact tab
@@ -114,19 +124,13 @@ function appearContact(even) {
     } else {
         orange.classList.add('change-size-larger')
         hiddenAboutMe.classList.remove('about')
-        hiddenResume.classList.remove('resume')
+        // hiddenResume.classList.remove('resume')
         hiddenPort.classList.remove('projects')
         setTimeout(() => {
             hiddenContact.classList.add('contact')
         }, 100)
     }
 }
-
-
-
-
-
-
 
 // ===================== gsap ===================== 
 pageTransition = () => {
@@ -220,6 +224,3 @@ delay = (n) => {
 //         }
 //     ]
 // })
-
-
-
